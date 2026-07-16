@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="portfolio-entry">
+  <a class="back-link" href="{{ '/portfolio/' | relative_url }}">&larr; Back to Portfolio</a>
+  <h1>{{ page.title }}</h1>
+  {% if page.summary %}<p class="entry-summary">{{ page.summary }}</p>{% endif %}
+
+  {% if page.images %}
+  <div class="image-gallery">
+    {% for img in page.images %}
+    <img src="{{ img | relative_url }}" alt="{{ page.title }} map {{ forloop.index }}" loading="lazy">
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {{ content }}
+
+  {% if page.external_link %}
+  <p><a class="external-link" href="{{ page.external_link }}" target="_blank" rel="noopener">{{ page.external_link_text | default: "View project" }} &rarr;</a></p>
+  {% endif %}
+</article>

@@ -1,0 +1,36 @@
+title: Dusty Pilkington
+tagline: Just a geographer seeking to understand our world
+description: >-
+  GIS analyst and geographer specializing in land use planning, spatial analysis,
+  and cartographic automation.
+author: Dusty Pilkington
+email: pilkingtongeospatial@gmail.com
+url: "https://pilkingtongeospatial.github.io"
+baseurl: "/professional_site"
+theme: null
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "portfolio"
+    values:
+      layout: portfolio
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

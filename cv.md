@@ -6,11 +6,10 @@ permalink: /cv/
 
 # Curriculum Vitae and Publications
 
-## Curriculum Vitae and Resume
+## Curriculum Vitae
 
 <ul class="file-list">
-  <li><span>Curriculum Vitae</span> <a href="{{ '/assets/files/Dusty_Pilkington_CV.pdf' | relative_url }}">Download (.pdf)</a></li>
-  <li><span>Resume</span> <a href="{{ '/assets/files/dustypilkington_resume.docx' | relative_url }}">Download (.docx)</a></li>
+  <li><span>Full CV</span> <a href="{{ '/assets/files/Dusty_Pilkington_CV.pdf' | relative_url }}">Download (.pdf)</a></li>
 </ul>
 
 ## Publications

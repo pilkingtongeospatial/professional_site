@@ -9,7 +9,7 @@ permalink: /cv/
 ## Curriculum Vitae and Resume
 
 <ul class="file-list">
-  <li><span>Curriculum Vitae</span> <a href="{{ '/assets/files/cv_5_6_2019.docx' | relative_url }}">Download (.docx)</a></li>
+  <li><span>Curriculum Vitae</span> <a href="{{ '/assets/files/Dusty_Pilkington_CV.pdf' | relative_url }}">Download (.pdf)</a></li>
   <li><span>Resume</span> <a href="{{ '/assets/files/dustypilkington_resume.docx' | relative_url }}">Download (.docx)</a></li>
 </ul>
 

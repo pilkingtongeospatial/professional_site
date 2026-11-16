@@ -16,6 +16,7 @@ body {
   color: var(--ink);
   background: var(--paper);
   line-height: 1.6;
+  overflow-x: clip; /* 100vw hero includes scrollbar width; avoid sideways scroll */
 }
 
 .wrap {
@@ -59,18 +60,41 @@ h1, h2, h3 { line-height: 1.25; letter-spacing: -0.01em; }
 main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; min-height: 60vh; }
 
 /* Home hero */
+/* Full-bleed: break out of .wrap to span the whole viewport */
 .hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: -2.5rem; /* cancel main.wrap top padding so it sits under the nav */
+  margin-bottom: 2.5rem;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 3rem 0 2rem;
+  padding: 4rem 1.5rem;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
-.hero h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-.hero p.tagline { color: var(--ink-soft); font-size: 1.15rem; margin-top: 0; }
-.hero-image {
-  width: 100%;
-  max-height: 340px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 1.5rem 0;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5));
+}
+.hero > * { position: relative; }
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  margin: 0 0 0.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+.hero p.tagline {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  margin: 0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 /* Portfolio index grid */

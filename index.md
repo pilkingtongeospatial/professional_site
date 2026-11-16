@@ -3,8 +3,7 @@ layout: default
 title: Home
 ---
 
-<section class="hero">
-  <img class="hero-image" src="{{ '/assets/images/header-bg.jpg' | relative_url }}" alt="Landscape">
+<section class="hero" style="background-image: url('{{ '/assets/images/header-bg.jpg' | relative_url }}');" role="img" aria-label="Mountain lake landscape">
   <h1>Dusty Pilkington</h1>
   <p class="tagline">Just a geographer seeking to understand our world</p>
 </section>

@@ -98,6 +98,7 @@ main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; min-height: 60vh; }
 }
 
 /* Portfolio index grid */
+.section-note { color: var(--ink-soft); margin-top: -0.25rem; }
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

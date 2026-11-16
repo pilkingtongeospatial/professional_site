@@ -6,6 +6,10 @@ permalink: /portfolio/
 
 # Portfolio
 
+## Projects Archive
+
+<p class="section-note">These are the projects I worked on when I first got started. I keep them here as a reminder of how far I have come.</p>
+
 <ul class="portfolio-grid">
 {% for item in site.portfolio %}
   <li class="portfolio-card">

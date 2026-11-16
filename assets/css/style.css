@@ -17,7 +17,12 @@ body {
   background: var(--paper);
   line-height: 1.6;
   overflow-x: clip; /* 100vw hero includes scrollbar width; avoid sideways scroll */
+  /* Keep the footer at the bottom of the window on short pages */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+body > main { flex: 1; width: 100%; }
 
 .wrap {
   max-width: var(--max-width);
@@ -85,6 +90,13 @@ main.wrap { padding-top: 2.5rem; padding-bottom: 4rem; min-height: 60vh; }
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5));
 }
 .hero > * { position: relative; }
+/* When nothing follows the hero, let the photo fill the screen down to the footer */
+main.wrap:has(> .hero:last-child) {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+.hero:last-child { margin-bottom: 0; flex: 1; }
 .hero h1 {
   font-size: clamp(2.2rem, 6vw, 3.5rem);
   margin: 0 0 0.5rem;
